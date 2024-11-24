@@ -1,8 +1,10 @@
+/* General Styles */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #f5b7b1, #f8c471);
     color: #333;
 }
 
@@ -11,10 +13,11 @@ h2 {
     color: #2c3e50;
     text-align: center;
     font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 
@@ -23,54 +26,69 @@ h2 {
 #questionSection {
     text-align: center;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #3498db;
 }
 
 #questionSection p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #3498db;
+    font-weight: bold;
 }
 
-* Form styles */ #reasonForm {
-    max-width: 600px;
+
+/* Form styles */
+
+#reasonForm {
+    max-width: 650px;
     margin: 50px auto;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #2ecc71;
 }
 
 #reasonForm label {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
     display: block;
+    font-weight: bold;
 }
 
 #reasonForm input {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+#reasonForm input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
 }
 
 #reasonForm button {
-    padding: 10px 15px;
-    background-color: #3498db;
+    padding: 12px 18px;
+    background-color: #8e44ad;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 100%;
+    transition: 0.3s ease;
 }
 
 #reasonForm button:hover {
-    background-color: #2980b9;
+    background-color: #9b59b6;
 }
 
 
@@ -79,18 +97,20 @@ h2 {
 #sharedResponses {
     max-width: 800px;
     margin: 30px auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #f39c12;
 }
 
 #sharedResponses p {
-    padding: 15px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 12px 0;
+    background-color: #f7f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
 }
 
 
@@ -99,17 +119,18 @@ h2 {
 #editResponsesButton {
     display: block;
     margin: 30px auto;
-    padding: 10px 20px;
-    background-color: #e74c3c;
+    padding: 12px 25px;
+    background-color: #f39c12;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    transition: 0.3s ease;
 }
 
 #editResponsesButton:hover {
-    background-color: #c0392b;
+    background-color: #e67e22;
 }
 
 
@@ -117,8 +138,9 @@ h2 {
 
 #responseMessage {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #responseMessage.success {
@@ -133,18 +155,19 @@ h2 {
 /* Admin Controls (Edit/Delete buttons for each response) */
 
 #sharedResponses div {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 #sharedResponses button {
-    padding: 5px 10px;
+    padding: 8px 14px;
     background-color: #3498db;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
-    font-size: 1rem;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
 }
 
 #sharedResponses button:hover {
@@ -157,4 +180,30 @@ h2 {
 
 #sharedResponses button:nth-child(2):hover {
     background-color: #c0392b;
+}
+
+
+/* Hover and Focus Effects */
+
+button,
+input {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+button:hover {
+    transform: scale(1.05);
+}
+
+
+/* Hover and Focus Effects */
+
+button,
+input {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+button:hover {
+    transform: scale(1.05);
 }
